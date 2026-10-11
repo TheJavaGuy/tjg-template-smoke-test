@@ -1,6 +1,6 @@
-# template-ghpages
+# tjg-template-smoke-test
 
-Template for small static web apps: Vite+, TypeScript, Tailwind CSS 4, DaisyUI 5, GitHub Pages.
+Smoke test of the template bootstrap.
 
 ## Stack
 

@@ -1,9 +1,9 @@
 {
-  "name": "template-ghpages",
+  "name": "tjg-template-smoke-test",
   "version": "0.1.0",
   "private": true,
-  "description": "Template for small static web apps: Vite+, TypeScript, Tailwind CSS 4, DaisyUI 5, GitHub Pages.",
-  "homepage": "https://thejavaguy.github.io/template-ghpages/",
+  "description": "Smoke test of the template bootstrap.",
+  "homepage": "https://thejavaguy.github.io/tjg-template-smoke-test/",
   "license": "MIT",
   "author": {
     "name": "Ivan Milosavljević",
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/TheJavaGuy/template-ghpages.git"
+    "url": "git+https://github.com/TheJavaGuy/tjg-template-smoke-test.git"
   },
   "type": "module",
   "scripts": {

@@ -1,38 +1,9 @@
-# template-ghpages
+# tjg-template-smoke-test
 
-Template for small static web apps: Vite+, TypeScript, Tailwind CSS 4, DaisyUI 5, GitHub Pages.
+Smoke test of the template bootstrap.
 
-Live: https://thejavaguy.github.io/template-ghpages/
+Live: https://thejavaguy.github.io/tjg-template-smoke-test/
 
-<!-- template:start -->
-
-## Template usage
-
-Create a new project from this template (requires [`gh`](https://cli.github.com/) logged in, Node 24+, pnpm):
-
-```sh
-gh repo create NAME --template TheJavaGuy/template-ghpages --public --clone \
-  && cd NAME && node scripts/init.mjs && pnpm install && git push
-```
-
-`scripts/init.mjs` runs once and then deletes itself. It:
-
-1. Derives `owner/name` from the `origin` remote.
-2. Asks for a one-line description.
-3. Replaces the template name, URLs and description in `package.json`, `index.html`, `README.md`, `CLAUDE.md`.
-4. Sets `package.json` `author` from `git config user.name`.
-5. Removes this section, `CHANGELOG.md`, `SPEC.md` and itself.
-6. If `gh` is authenticated: sets the GitHub repo description and homepage, and enables GitHub Pages with source "GitHub Actions".
-7. Commits everything as `chore: bootstrap from template`.
-
-Non-interactive: `node scripts/init.mjs --description "One line"`.
-
-After the first push, the deploy workflow publishes the site. If Pages could not be enabled automatically, open the repo's Settings > Pages and set Source to "GitHub Actions", then re-run the workflow.
-
-Then: replace `public/og-image.png` (1200x630) and the favicons, and, if you want analytics, set the repository variable `VITE_CLARITY_ID` (Settings > Secrets and variables > Actions > Variables).
-
-Updating the template itself: edit, run `pnpm check && pnpm test && pnpm build`, note the change in `CHANGELOG.md`, push to `main`. The template deploys itself as the live demo above. Derived projects do not receive template updates.
-<!-- template:end -->
 
 ## Development
 
