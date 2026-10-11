@@ -1,0 +1,204 @@
+@import "tailwindcss";
+@import "@fontsource-variable/manrope";
+@import "@fontsource-variable/fraunces/full.css";
+
+@plugin "daisyui" {
+  themes:
+    tjg-light --default,
+    tjg-dark --prefersdark;
+}
+
+/* Ported from altersvorsorgedepot-calculator. See DESIGN.md. */
+@plugin "daisyui/theme" {
+  name: "tjg-light";
+  default: true;
+  prefersdark: false;
+  color-scheme: light;
+
+  --color-base-100: #f6f7f3;
+  --color-base-200: #ecefe8;
+  --color-base-300: #dbe0d7;
+  --color-base-content: #16262d;
+  --color-primary: #0f5e6b;
+  --color-primary-content: #e6f6f8;
+  --color-secondary: #c9962b;
+  --color-secondary-content: #2b1f05;
+  --color-accent: #3f7d5a;
+  --color-accent-content: #eaf6ee;
+  --color-neutral: #16262d;
+  --color-neutral-content: #e8eeea;
+  --color-info: #2f6f8f;
+  --color-info-content: #eaf4fa;
+  --color-success: #2e8b57;
+  --color-success-content: #eaf7ef;
+  --color-warning: #d08a1e;
+  --color-warning-content: #2b1f05;
+  --color-error: #b9372a;
+  --color-error-content: #fff1ef;
+
+  --radius-selector: 1rem;
+  --radius-field: 0.5rem;
+  --radius-box: 1rem;
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+  --border: 1px;
+  --depth: 0;
+  --noise: 0;
+
+  --ink-soft: #4b5f67;
+  --hairline: #cfd6ce;
+  --gold-soft: #f3e4c2;
+  --teal-soft: #d8ebee;
+}
+
+@plugin "daisyui/theme" {
+  name: "tjg-dark";
+  default: false;
+  prefersdark: true;
+  color-scheme: dark;
+
+  --color-base-100: #14232a;
+  --color-base-200: #0f1b21;
+  --color-base-300: #1e323c;
+  --color-base-content: #e6ece8;
+  --color-primary: #4fb3c2;
+  --color-primary-content: #06262c;
+  --color-secondary: #e2b65a;
+  --color-secondary-content: #2b1f05;
+  --color-accent: #6fbf8e;
+  --color-accent-content: #06200f;
+  --color-neutral: #e6ece8;
+  --color-neutral-content: #14232a;
+  --color-info: #6aaed6;
+  --color-info-content: #06202c;
+  --color-success: #5cc08a;
+  --color-success-content: #06200f;
+  --color-warning: #e3a33a;
+  --color-warning-content: #2b1f05;
+  --color-error: #e06a5c;
+  --color-error-content: #2b0a06;
+
+  --radius-selector: 1rem;
+  --radius-field: 0.5rem;
+  --radius-box: 1rem;
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+  --border: 1px;
+  --depth: 0;
+  --noise: 0;
+
+  --ink-soft: #a3b3ae;
+  --hairline: #2c414b;
+  --gold-soft: #3a2f14;
+  --teal-soft: #153840;
+}
+
+@theme {
+  --font-sans: "Manrope Variable", system-ui, sans-serif;
+  --font-display: "Fraunces Variable", Georgia, serif;
+
+  --text-sm: 0.833rem;
+  --text-sm--line-height: 1.5;
+  --text-base: 1rem;
+  --text-base--line-height: 1.6;
+  --text-lg: 1.2rem;
+  --text-lg--line-height: 1.5;
+  --text-xl: 1.44rem;
+  --text-xl--line-height: 1.3;
+  --text-2xl: 1.728rem;
+  --text-2xl--line-height: 1.2;
+  --text-h3: clamp(1.2rem, 1.106rem + 0.417vw, 1.44rem);
+  --text-h2: clamp(1.44rem, 1.03rem + 1.823vw, 2.488rem);
+  --text-h1: clamp(2.074rem, 1.203rem + 3.871vw, 4.3rem);
+}
+
+@layer base {
+  :root {
+    scroll-padding-top: calc(env(safe-area-inset-top, 0px) + 3.5rem);
+  }
+
+  body {
+    font-feature-settings: "tnum";
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+  }
+
+  @media (max-width: 640px) {
+    :root {
+      --text-base--line-height: 1.5;
+    }
+  }
+
+  @media (pointer: coarse) {
+    .btn {
+      min-height: 44px;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer components {
+  .wrap {
+    max-width: 76rem;
+    margin-inline: auto;
+    padding-inline: 1.25rem;
+
+    @media (min-width: 768px) {
+      padding-inline: 2rem;
+    }
+  }
+
+  .display {
+    font-family: var(--font-display);
+    font-variation-settings: "SOFT" 40;
+    letter-spacing: -0.015em;
+    line-height: 1.02;
+  }
+
+  .num {
+    font-family: var(--font-display);
+    font-variation-settings: "SOFT" 20;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .hairline {
+    border-color: var(--hairline);
+  }
+
+  .soft {
+    color: var(--ink-soft);
+  }
+
+  .kicker {
+    color: var(--ink-soft);
+    font-size: var(--text-sm);
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .lead {
+    font-size: var(--text-lg);
+    line-height: var(--text-lg--line-height);
+    max-width: 56ch;
+  }
+
+  .navbar-top {
+    background: color-mix(in srgb, var(--color-base-100) 86%, transparent);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--hairline);
+  }
+}

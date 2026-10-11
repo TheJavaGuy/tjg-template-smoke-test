@@ -1,0 +1,47 @@
+{
+  "name": "template-ghpages",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Template for small static web apps: Vite+, TypeScript, Tailwind CSS 4, DaisyUI 5, GitHub Pages.",
+  "homepage": "https://thejavaguy.github.io/template-ghpages/",
+  "license": "MIT",
+  "author": {
+    "name": "Ivan Milosavljević",
+    "url": "https://thejavaguy.org"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheJavaGuy/template-ghpages.git"
+  },
+  "type": "module",
+  "scripts": {
+    "dev": "vp dev",
+    "build": "vp build",
+    "preview": "vp preview",
+    "check": "vp check",
+    "lint": "vp lint",
+    "fmt": "vp fmt",
+    "test": "vp test --run"
+  },
+  "devDependencies": {
+    "@fontsource-variable/fraunces": "5.3.0",
+    "@fontsource-variable/manrope": "5.3.0",
+    "@tailwindcss/vite": "4.3.3",
+    "daisyui": "5.7.47",
+    "happy-dom": "20.14.6",
+    "tailwindcss": "4.3.3",
+    "typescript": "7.0.2",
+    "vite": "catalog:",
+    "vite-plus": "catalog:"
+  },
+  "devEngines": {
+    "packageManager": {
+      "name": "pnpm",
+      "version": "12.11.2",
+      "onFail": "download"
+    }
+  },
+  "engines": {
+    "node": ">=24"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "enabledPlugins": {
+    "typescript-lsp": true,
+    "javascript-typescript": true,
+    "github": true
+  },
+  "permissions": {
+    "allow": ["Bash(pnpm:*)", "Bash(vp:*)", "Bash(gh:*)", "Bash(git:*)"]
+  }
+}
