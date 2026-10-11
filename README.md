@@ -4,7 +4,6 @@ Smoke test of the template bootstrap.
 
 Live: https://thejavaguy.github.io/tjg-template-smoke-test/
 
-
 ## Development
 
 Requirements: Node per `.nvmrc` (`nvm install` reads it) and pnpm 12 (`corepack enable` or `brew install pnpm`).
